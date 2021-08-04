@@ -1,3 +1,9 @@
 /.vscode
 /flaskENV
 /__pycache__
+/pyc
+
+flaskblog/__pycache__/routes.cpython-37.pyc
+flaskblog/__pycache__/models.cpython-37.pyc
+flaskblog/__pycache__/forms.cpython-37.pyc
+flaskblog/__pycache__/__init__.cpython-37.pyc
