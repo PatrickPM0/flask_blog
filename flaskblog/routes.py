@@ -1,4 +1,5 @@
-from flask_login.utils import login_user, current_user
+import flask_login
+from flask_login.utils import login_user, current_user, logout_user
 from flaskblog.models import User, Post
 from flask import render_template, url_for, flash, redirect
 from flaskblog.forms import RegistrationForm, LoginForm
@@ -61,3 +62,9 @@ def login():
         else:
             flash('Login Unsuccessful. Please check email and password', 'danger')
     return render_template('login.html', title='Login', form=form)
+
+
+@app.route("/logout")
+def logout():
+    logout_user()
+    return redirect(url_for("home"))
