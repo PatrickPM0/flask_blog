@@ -16,9 +16,9 @@ def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(Config)
 
-    db.init(app)
-    bcrypt.init(app)
-    login_manager.init(app)
+    db.init_app(app)
+    bcrypt.init_app(app)
+    login_manager.init_app(app)
 
     from flaskblog.users.routes import users
     from flaskblog.posts.routes import posts
